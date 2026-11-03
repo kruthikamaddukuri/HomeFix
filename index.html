@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HomeFix | Your home. Fixed in a flash.</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="#" class="logo">Home<span>Fix</span><small>HOME SERVICES</small></a>
+
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#why-us">Why HomeFix</a>
+      <a href="#how-it-works">How it works</a>
+    </nav>
+
+    <button class="nav-button" onclick="showBooking()">Book a Service <span>↗</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="availability"><span></span> YOUR HOME, OUR PRIORITY</div>
+
+        <h1>Home problems?<br><span>We’ll fix them.</span></h1>
+
+        <p class="hero-description">
+          Find trusted professionals for your everyday home repairs.
+          Simple booking, transparent pricing, and service you can count on.
+        </p>
+
+        <div class="search-box">
+          <span>⌕</span>
+          <input
+            type="text"
+            id="service-search"
+            placeholder="What needs fixing? Try plumbing..."
+            oninput="searchServices()"
+          >
+          <button onclick="searchServices()">Search <span>→</span></button>
+        </div>
+
+        <div class="trust-row">
+          <span>✓ Verified professionals</span>
+          <span>✓ Clear pricing</span>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-circle"></div>
+        <div class="home-emoji">🏠</div>
+
+        <div class="floating-card card-top">
+          <span class="floating-icon">✦</span>
+          <div>
+            <strong>Home care, made easy</strong>
+            <p>Repairs without the hassle</p>
+          </div>
+        </div>
+
+        <div class="floating-card card-bottom">
+          <span class="rating-star">★</span>
+          <div>
+            <strong>Designed around trust</strong>
+            <p>Reliable service experience</p>
+          </div>
+        </div>
+
+        <div class="decorative-dot dot-one"></div>
+        <div class="decorative-dot dot-two"></div>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">WHAT DO YOU NEED?</p>
+          <h2>Services for every home</h2>
+        </div>
+        <p>Small fixes. Big peace of mind.</p>
+      </div>
+
+      <div class="services-grid">
+        <button class="service-card" data-service="Plumbing" onclick="selectService('Plumbing')">
+          <span class="service-icon plumbing">🚰</span>
+          <span class="service-label">HOME REPAIR</span>
+          <h3>Plumbing</h3>
+          <p>Leaks, taps, and pipe repairs</p>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="service-card" data-service="Electrical" onclick="selectService('Electrical')">
+          <span class="service-icon electrical">⚡</span>
+          <span class="service-label">HOME REPAIR</span>
+          <h3>Electrical</h3>
+          <p>Switches, wiring, and fittings</p>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="service-card" data-service="AC Repair" onclick="selectService('AC Repair')">
+          <span class="service-icon cooling">❄️</span>
+          <span class="service-label">MAINTENANCE</span>
+          <h3>AC Repair</h3>
+          <p>Servicing and cooling issues</p>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="service-card" data-service="Appliance Repair" onclick="selectService('Appliance Repair')">
+          <span class="service-icon appliance">🧺</span>
+          <span class="service-label">APPLIANCE CARE</span>
+          <h3>Appliance Repair</h3>
+          <p>Help with everyday appliances</p>
+          <span class="card-arrow">↗</span>
+        </button>
+      </div>
+
+      <p id="no-results" class="no-results">No matching services found. Try another search.</p>
+    </section>
+
+    <section class="why-section" id="why-us">
+      <div class="why-heading">
+        <p class="eyebrow">THE HOMEFIX DIFFERENCE</p>
+        <h2>Home repairs,<br><span>without the stress.</span></h2>
+        <p>We make finding the right professional simple and comfortable.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">🛡️</div>
+          <h3>Trust comes first</h3>
+          <p>Designed around verified professionals and a reliable service experience.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">💰</div>
+          <h3>Clear expectations</h3>
+          <p>Understand the service and expected cost before confirming your request.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon">📅</div>
+          <h3>Easy scheduling</h3>
+          <p>Share your issue and choose a convenient time for your repair.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <p class="eyebrow">A SIMPLE PROCESS</p>
+      <h2>Repairs in three easy steps</h2>
+
+      <div class="steps-grid">
+        <div class="step">
+          <span class="step-number">01</span>
+          <div class="step-icon">🔎</div>
+          <h3>Choose a service</h3>
+          <p>Tell us what needs fixing at home.</p>
+        </div>
+
+        <div class="step">
+          <span class="step-number">02</span>
+          <div class="step-icon">📝</div>
+          <h3>Share the details</h3>
+          <p>Describe the issue so the professional knows what to expect.</p>
+        </div>
+
+        <div class="step">
+          <span class="step-number">03</span>
+          <div class="step-icon">✓</div>
+          <h3>Confirm your request</h3>
+          <p>Review your details and submit your demo booking request.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <p class="eyebrow">READY TO GET STARTED?</p>
+        <h2>Let’s make your home<br>feel like home again.</h2>
+      </div>
+      <button class="primary-button" onclick="showBooking()">Book a Service <span>→</span></button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div>
+        <a href="#" class="logo footer-logo">Home<span>Fix</span></a>
+        <p>Your home. Fixed in a flash.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#why-us">Why HomeFix</a>
+        <a href="#how-it-works">How it works</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>UI/UX frontend prototype · Demo project</small>
+      <small>Made with care for better home experiences.</small>
+    </div>
+  </footer>
+
+  <button class="help-button" onclick="showBooking()">
+    <span>✦</span> Need help?
+  </button>
+
+  <div class="modal" id="booking-modal">
+    <div class="modal-content">
+      <button class="close-button" onclick="closeBooking()" aria-label="Close">×</button>
+
+      <div class="modal-icon">🏠</div>
+      <p class="eyebrow">BOOK A SERVICE</p>
+      <h2>What needs fixing?</h2>
+      <p class="modal-description">Share a few details to create your demo request.</p>
+
+      <label for="service-select">Choose a service</label>
+      <select id="service-select">
+        <option value="">Select a service</option>
+        <option value="Plumbing">Plumbing</option>
+        <option value="Electrical">Electrical</option>
+        <option value="AC Repair">AC Repair</option>
+        <option value="Appliance Repair">Appliance Repair</option>
+      </select>
+
+      <label for="problem">Describe the problem</label>
+      <textarea id="problem" placeholder="Example: The kitchen tap is leaking..." rows="4"></textarea>
+
+      <button class="primary-button full-button" onclick="confirmBooking()">Submit Request <span>→</span></button>
+      <p id="booking-message" class="booking-message" aria-live="polite"></p>
+      <small class="demo-note">This is a frontend demo. No real booking will be made.</small>
+    </div>
+  </div>
+</body>
+</html>
